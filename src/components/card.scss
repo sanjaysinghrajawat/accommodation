@@ -1,0 +1,149 @@
+@import "../../responsive.scss";
+
+.card {
+  display: flex;
+  gap: 15px;
+  // border: solid 1px black;
+  // border-radius: 10px;
+  &:hover{
+    scale: 1.01;
+  }
+
+  .imageContainer {
+    flex: 2;
+    height: 200px;
+
+    // @include md {
+    //   display: none;
+    // }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .textContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // gap: 5px;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #5a5a5a;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      margin-bottom: -5px;
+
+      &:hover {
+        color: #000;
+        scale: 1.01;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #888;
+      margin-bottom: -5px;
+      
+      @include sm{
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 300;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: rgba(255, 129, 38, 0.628);
+      width: max-content;
+      @include sm{
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      // gap: 10px;
+
+      .features {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: whitesmoke;
+          padding: 5px;
+          border-radius: 5px;
+
+          @include sm{
+            span{
+              margin-top: 5px;
+              padding-left: 5px;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .icons {
+        display: flex;
+        gap: 20px;
+
+        @include sm{
+          gap: 10px;
+          margin-left: 10px;
+        }
+
+        .icon {
+          border: 1px solid #999;
+          padding: 2px 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+
+          &:hover {
+            background-color: lightgray;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    // border: 1px solid red;
+
+
+    .imageContainer {
+      flex: none;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .textContainer {
+      flex: none;
+    }
+  }
+}

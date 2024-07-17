@@ -1,0 +1,45 @@
+
+@import "../../../responsive.scss";
+
+hr {
+  height: 1px;
+  width: 100%;
+  margin-top: -30px;
+  background-color: rgba(225, 225, 225, 0.56);
+  border-radius: 20px;
+}
+
+.listPage {
+  display: flex;
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+
+    .wrapper{
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: hidden;
+      padding-bottom: 50px;
+    }
+  }
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+    position: sticky;
+    top: 0;
+
+    @include md{
+      display: none;
+    }
+  }
+}
